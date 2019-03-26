@@ -14,7 +14,11 @@ describe("groupArrayElements", () => {
     assert.deepEqual(result, [[1, 2, 3, 4, 5]]);
   });
 
-  it("groups an array into 3 new arrays when N is 3");
+  it("groups an array into 3 new arrays when N is 3", () => {
+    const input = [1, 2, 3, 4, 5];
+    const result = groupArrayElements(input, 3);
+    assert.deepEqual(result, [[1, 2], [3, 4], [5]]);
+  });
 
   it("groups array into `length` arrays when N is `length`");
 });
