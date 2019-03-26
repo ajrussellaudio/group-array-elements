@@ -1,5 +1,5 @@
 const groupArrayElements = (array, numberOfChunks) => {
-  if (numberOfChunks <= 0) return array;
+  if (numberOfChunks < 0) return array;
   const chunkSize = Math.ceil(array.length / numberOfChunks);
   return Array(numberOfChunks)
     .fill(null)

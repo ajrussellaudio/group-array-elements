@@ -2,10 +2,16 @@ const assert = require("assert");
 const groupArrayElements = require("../src/groupArrayElements");
 
 describe("groupArrayElements", () => {
-  it("returns the original array when N is 0 or less", () => {
+  it("returns the original array when N is less than 0", () => {
+    const input = [1, 2, 3, 4, 5];
+    const result = groupArrayElements(input, -1);
+    assert.deepEqual(result, input);
+  });
+
+  it("returns empty array when N is 0", () => {
     const input = [1, 2, 3, 4, 5];
     const result = groupArrayElements(input, 0);
-    assert.deepEqual(result, input);
+    assert.deepEqual(result, []);
   });
 
   it("groups an array into 1 new array when N is 1", () => {
