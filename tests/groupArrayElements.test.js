@@ -20,5 +20,9 @@ describe("groupArrayElements", () => {
     assert.deepEqual(result, [[1, 2], [3, 4], [5]]);
   });
 
-  it("groups array into `length` arrays when N is `length`");
+  it("groups array into `length` arrays when N is `length`", () => {
+    const input = [1, 2, 3, 4, 5];
+    const result = groupArrayElements(input, input.length);
+    assert.deepEqual(result, [[1], [2], [3], [4], [5]]);
+  });
 });
